@@ -1,0 +1,6 @@
+[allowlist]
+  description = "Mock data"
+  paths = [
+    '''config''',
+    '''\.gitleaks\.toml$''',
+  ]
