@@ -19,7 +19,7 @@ pipeline {
   }
   post {
     failure {
-        archvieArtifacts artifacts: '*.txt'
+        archiveArtifacts artifacts: '*.txt'
         build job: 'apply/main'
     }
     success {
@@ -27,7 +27,7 @@ pipeline {
             rm drift-report.txt
             echo "There is no configuration drift" > no-drift.txt
         """
-        archvieArtifacts artifacts: '*.txt'
+        archiveArtifacts artifacts: '*.txt'
     }
   }
 }
